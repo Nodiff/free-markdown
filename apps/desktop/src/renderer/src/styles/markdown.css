@@ -1,0 +1,229 @@
+/* 预览与导出共用排版（PLAN §5.5：看到的 = 导出的） */
+
+.markdown-body {
+  font-size: 15px;
+  line-height: 1.78;
+  color: var(--text);
+  word-wrap: break-word;
+}
+
+.markdown-body .md-block {
+  margin: 0 0 14px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin: 26px 0 12px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.markdown-body .md-block:first-child h1,
+.markdown-body .md-block:first-child h2,
+.markdown-body .md-block:first-child h3 {
+  margin-top: 4px;
+}
+
+.markdown-body h1 {
+  font-size: 1.72em;
+}
+
+.markdown-body h2 {
+  font-size: 1.4em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-body h3 {
+  font-size: 1.18em;
+}
+
+.markdown-body h4 {
+  font-size: 1.04em;
+}
+
+.markdown-body p {
+  margin: 0 0 12px;
+}
+
+.markdown-body a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body del {
+  color: var(--muted);
+}
+
+.markdown-body blockquote {
+  margin: 0 0 12px;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid var(--border-strong);
+  color: var(--text-dim);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0 0 12px;
+  padding-left: 26px;
+}
+
+.markdown-body li {
+  margin: 3px 0;
+}
+
+.markdown-body .md-task {
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+
+/* GFM 任务列表：去掉圆点，复选框与文字对齐 */
+.markdown-body li.task-list-item {
+  list-style: none;
+  margin-left: -18px;
+}
+
+/* 脚注区 */
+.markdown-body section.footnotes {
+  margin-top: 26px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.92em;
+  color: var(--text-dim);
+}
+
+.markdown-body section.footnotes h2 {
+  font-size: 0.95em;
+  margin: 0 0 8px;
+  color: var(--text-dim);
+}
+
+.markdown-body section.footnotes ol {
+  padding-left: 20px;
+}
+
+.markdown-body section.footnotes li {
+  margin: 2px 0;
+}
+
+.markdown-body hr {
+  margin: 22px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.markdown-body code {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: var(--panel-alt);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.markdown-body pre {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.markdown-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.markdown-body table {
+  margin: 0 0 14px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13.5px;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: var(--panel-alt);
+  font-weight: 600;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* ---------- mermaid ---------- */
+
+.markdown-body .mermaid-block {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.markdown-body .mermaid-block svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-body .mermaid-block--error {
+  border-color: var(--warning-border);
+  background: var(--warning-bg);
+}
+
+.markdown-body .mermaid-block__label {
+  font-size: 12px;
+  color: var(--warning);
+  margin-bottom: 6px;
+}
+
+.markdown-body .mermaid-block__error,
+.markdown-body .mermaid-block__source {
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+}
+
+.markdown-body .mermaid-block__error {
+  color: var(--warning);
+  margin-bottom: 6px;
+}
+
+/* ---------- KaTeX ---------- */
+
+.markdown-body .katex {
+  font-size: 1.04em;
+}
+
+.markdown-body .katex-display {
+  margin: 4px 0 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

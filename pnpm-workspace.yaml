@@ -1,0 +1,18 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# pnpm 10+ 默认拦截依赖的构建脚本；electron 必须跑 postinstall 下载二进制
+onlyBuiltDependencies:
+  - electron
+  - esbuild
+
+# pnpm 11 用显式 allowBuilds 决策；electron-winstaller 只服务 Windows 的 Squirrel 目标，
+# 本项目走 NSIS，不需要它的构建脚本
+allowBuilds:
+  electron: true
+  esbuild: true
+  electron-winstaller: false
+
+overrides:
+  katex: 0.16.47

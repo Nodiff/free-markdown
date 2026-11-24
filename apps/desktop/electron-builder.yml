@@ -1,0 +1,44 @@
+appId: com.freemarkdown.app
+productName: FreeMarkdown
+copyright: Copyright © 2026 FreeMarkdown contributors
+
+directories:
+  buildResources: build
+  output: dist
+
+files:
+  - out/**/*
+  - package.json
+  - '!**/*.map'
+
+asar: true
+
+mac:
+  category: public.app-category.productivity
+  icon: build/icon.icns
+  target:
+    - dmg
+  # 自用阶段不签名（开源后由用户自行配置证书）
+  identity: null
+  extendInfo:
+    CFBundleName: FreeMarkdown
+    CFBundleDisplayName: FreeMarkdown
+
+win:
+  icon: build/icon.png
+  target:
+    - nsis
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+
+dmg:
+  title: FreeMarkdown ${version}
+
+# 时间机器需要 git：M5 会把 dugite-native 的平台包放进 extraResources
+# extraResources:
+#   - from: vendor/git
+#     to: git

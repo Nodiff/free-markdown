@@ -1,0 +1,18 @@
+{
+  "name": "@freemarkdown/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FreeMarkdown 跨进程共享的类型与纯函数",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

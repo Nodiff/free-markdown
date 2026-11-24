@@ -1,0 +1,23 @@
+{
+  "name": "freemarkdown",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FreeMarkdown（飞码）— 本地 Markdown 编辑与管理",
+  "license": "MIT",
+  "packageManager": "pnpm@11.24.0",
+  "scripts": {
+    "dev": "pnpm --filter @freemarkdown/desktop dev",
+    "build": "pnpm --filter @freemarkdown/desktop build",
+    "typecheck": "pnpm -r typecheck",
+    "dist:dir": "pnpm --filter @freemarkdown/desktop dist:dir",
+    "dist:mac-x64": "pnpm --filter @freemarkdown/desktop dist:mac-x64",
+    "dist:mac-arm64": "pnpm --filter @freemarkdown/desktop dist:mac-arm64",
+    "dist:win-x64": "pnpm --filter @freemarkdown/desktop dist:win-x64"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

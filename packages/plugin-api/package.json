@@ -1,0 +1,21 @@
+{
+  "name": "@freemarkdown/plugin-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FreeMarkdown 插件 API 的类型定义（v1 只有类型，没有运行时）",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@freemarkdown/core": "workspace:*"
+  }
+}
